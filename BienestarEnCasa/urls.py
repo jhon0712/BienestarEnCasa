@@ -22,6 +22,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [ #aqui definimos que se solicita y luego las urls de cada app pa que sepa que tenga que hacer y no este esa cantidad de urls aqui, sino que se mande a cada app y que haga lo que tenga que hacer
     path('admin/', admin.site.urls),
+    path('', include('BienestarEnCasa.paginas_urls')),
     path('api/auth/', include('usuarios.urls')),
     path('api/usuarios/', include('usuarios.api_urls')), # manda lo de usuarios no proveedores
     path('api/proveedores/', include('usuarios.proveedores_urls')), #manda pa proveedores
